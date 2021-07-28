@@ -1,0 +1,83 @@
+body {
+    background-color: #E4E9FD;
+    min-height: 948px;
+}
+
+h1 {
+    color: #fff;
+}
+
+.login-button {
+    margin-top: 20px;
+}
+
+.login-google {
+    margin-top: 60px;
+}
+
+.shrink {
+    padding-right: 400px;
+    padding-left: 400px;
+}
+
+.shrink a {
+    display: block;
+    margin: 10px;
+}
+
+.list-of-items {
+    font-size: 1.5rem;
+}
+
+.list-elem {
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    margin-top: 20px;
+}
+
+.logout-form {
+    padding-right: 200px;
+    padding-left: 200px;
+}
+
+#header {
+    text-align: center;
+    background-color: #A683E3;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.container {
+    padding-top: 100px;
+    background-color: transparent;
+}
+
+#todolist {
+    background-color: #fff;
+    padding: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.btn {
+    background-color: #A683E3;
+    border-color: #A683E3;
+}
+
+.btn:hover {
+    background-color: #8a6dbd;
+    border-color: #8a6dbd;
+}
+
+.item-add-input {
+    text-align: center;
+}
+
+.error-message {
+    color: #f00;
+    padding-top: 20px;
+}
