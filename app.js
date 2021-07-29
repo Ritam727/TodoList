@@ -24,7 +24,7 @@ const optionsForMongoose = {
     useFindAndModify: false,
     useCreateIndex: true
 }
-mongoose.connect('mongodb+srv://admin-ritam:'+process.env.MONGODB_PASSWORD+'@cluster0.f1ewc.mongodb.net/Todolistv2DB', optionsForMongoose)
+mongoose.connect(process.env.MONGODB_URL, optionsForMongoose)
 
 const itemSchema = new mongoose.Schema({
     text: String
