@@ -1,28 +1,32 @@
 <%- include('partials/header') -%>
 
-<div class="container shrink">
-    <section id="header">
-        <h1>Today's TodoList</h1>
-    </section>
-    <section id="todolist">
-        <% listItems.forEach(function(item) { %>
-            <form action="/delete" method="post" class="form-check list-of-items">
-                <div class="list-elem"></div>
-                <input class="form-check-input" type="checkbox" onchange="this.form.submit()" value="<%= item.id %>" id="item-list">
-                <input type="hidden" name="elemID" value="<%= item.id %>">
-                <label class="form-check-label" for="item-list"><%= item.text %></label>
-            </form>
-        <% }) %>
-        <form action="/" method="post">
-            <div class="input-group">
-                <input type="text" name="newListItem" placeholder="New Item" class="form-control item-add-input">
-                <button type="submit" name="listName" class="btn btn-primary btn-add">Add</button>
-            </div>
+    <div class="container shrink">
+        <section id="header">
+            <h1>Today's TodoList</h1>
+        </section>
+        <section id="todolist">
+            <% listItems.forEach(function(item) { %>
+                <form action="/delete" method="post" class="form-check list-of-items">
+                    <div class="list-elem"></div>
+                    <input class="form-check-input" type="checkbox" onchange="this.form.submit()" value="<%= item.id %>"
+                        id="item-list">
+                    <input type="hidden" name="elemID" value="<%= item.id %>">
+                    <label class="form-check-label" for="item-list">
+                        <%= item.text %>
+                    </label>
+                </form>
+                <% }) %>
+                    <form action="/" method="post">
+                        <div class="input-group">
+                            <input type="text" name="newListItem" placeholder="New Item"
+                                class="form-control item-add-input">
+                            <button type="submit" name="listName" class="btn btn-primary btn-add">Add</button>
+                        </div>
+                    </form>
+        </section>
+        <form action="/logout" method="post" class="input-group">
+            <button class="btn btn-lg btn-primary logout-button">Logout</button>
         </form>
-    </section>
-    <form action="/logout" method="post" class="input-group">
-        <button class="btn btn-lg btn-primary logout-button">Logout</button>
-    </form>
-</div>
+    </div>
 
-<%- include('partials/footer') -%>
+    <%- include('partials/footer') -%>
